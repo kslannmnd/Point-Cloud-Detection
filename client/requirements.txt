@@ -1,0 +1,5 @@
+requests>=2.32
+numpy>=1.26
+plotly>=5.22
+pillow>=10.4
+lzfse>=0.4
