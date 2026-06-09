@@ -1,0 +1,17 @@
+mode: r3d
+checkpoint: ${softgroup.checkpoint_dir}/softgroup_s3dis_pretrained.pth
+target:
+  kind: r3d_file
+  file: null
+output_dir: ${project.outputs_dir}/r3d_inference
+metrics_dir: ${project.outputs_dir}/metrics
+save_visualization: true
+max_points_plot: 35000
+min_points_for_box: 50
+run_softgroup: true
+softgroup_config: null
+softgroup_data_root: dataset/s3dis/preprocess
+scene_prefix: r3d
+dummy_semantic_label: 12
+dummy_instance_label: -100
+save_softgroup_preprocess: true

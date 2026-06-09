@@ -1,0 +1,29 @@
+name: s3dis_preprocessed
+type: s3dis
+source_dir: ${env.kaggle.input_s3dis_preprocessed_dir}
+repo_dataset_dir: ${softgroup.repo_dir}/dataset/s3dis
+raw_dir_name: Stanford3dDataset_v1.2
+preprocess: false
+force_rebuild_preprocess: false
+preprocessed:
+  enabled: true
+  source_dir: ${env.kaggle.input_s3dis_preprocessed_dir}
+  archive_path: ${project.data_dir}/S3DIS_preprocessed.zip
+  extract_dir: ${project.data_dir}/S3DIS_preprocessed
+  copy_mode: symlink
+  required_dirs:
+    - preprocess
+    - preprocess_sample
+    - val_gt
+crop:
+  enabled: false
+  keep_rooms: []
+fold:
+  preferred_test_area: Area_5
+classes:
+  - door
+  - table
+  - chair
+  - sofa
+  - bookcase
+  - board

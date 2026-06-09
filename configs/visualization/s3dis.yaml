@@ -1,0 +1,28 @@
+mode: s3dis
+preprocess_dir: ${dataset.repo_dataset_dir}/preprocess
+results_root: ${project.outputs_dir}/s3dis_room_inference
+html_dir: ${project.outputs_dir}/visualizations/s3dis
+save_html: true
+show_inline: true
+allow_precomputed_results: false
+force_run: false
+display_tables: true
+renderer: null
+room:
+  max_points: 60000
+  point_size: 2.0
+  opacity: 0.85
+instance:
+  max_points: 70000
+  point_size: 2.4
+bbox:
+  max_points: 60000
+  point_size: 1.8
+  bbox_point_size: 3.0
+  bbox_points_per_edge: 90
+  outlier_quantile: 0.02
+compare:
+  max_background_points: 70000
+  background_point_size: 1.5
+  highlight_point_size: 4.0
+random_state: 42

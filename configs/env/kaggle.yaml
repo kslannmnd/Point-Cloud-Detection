@@ -1,0 +1,18 @@
+name: kaggle
+workspace: /kaggle/working
+is_kaggle: true
+use_apt: true
+apt_packages:
+  - libsparsehash-dev
+kaggle:
+  configure_api: false
+  input_s3dis_dir: /kaggle/input/datasets/ayukiseleva/s3dis-meow/Stanford3dDataset_v1.2
+  input_s3dis_preprocessed_dir: /kaggle/input/datasets/ayukiseleva/s3dis-preprocessed
+torch:
+  target_torch: 2.5.1
+  target_torchvision: 0.20.1
+  target_torchaudio: 2.5.1
+  index_url: https://download.pytorch.org/whl/cu121
+spconv:
+  cumm: cumm-cu121==0.7.11
+  spconv: spconv-cu121==2.3.8

@@ -1,0 +1,21 @@
+mode: external_train_file
+experiment_name: external_exp_1
+train_file: experiments/train_exp_1.py
+stages:
+  - backbone
+  - full_softgroup
+epochs:
+  backbone: 2
+  full_softgroup: 2
+lr:
+  backbone: 0.001
+  full_softgroup: 0.001
+train_batch_size: 1
+test_batch_size: 1
+num_workers: 2
+freeze_batch_norm: true
+rooms: all_trainable_rooms
+max_rooms: null
+selected_rooms: []
+enforce_trainable_areas: true
+save_dir: ${softgroup.checkpoint_dir}

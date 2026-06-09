@@ -1,0 +1,18 @@
+mode: experiment_file
+experiment_name: colab_exp_2_pretrained_medium_lr
+stages:
+  - full_softgroup
+pretrain_checkpoint: ${softgroup.checkpoint_dir}/softgroup_s3dis_pretrained.pth
+epochs:
+  full_softgroup: 4
+lr:
+  full_softgroup: 0.0003
+train_batch_size: 1
+test_batch_size: 1
+num_workers: 2
+freeze_batch_norm: true
+rooms: all_trainable_rooms
+max_rooms: null
+selected_rooms: []
+enforce_trainable_areas: true
+save_dir: ${softgroup.checkpoint_dir}

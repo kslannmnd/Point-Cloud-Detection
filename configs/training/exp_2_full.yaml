@@ -1,0 +1,18 @@
+mode: experiment_file
+experiment_name: exp_2_full_softgroup_only
+stages:
+  - full_softgroup
+epochs:
+  full_softgroup: 2
+lr:
+  full_softgroup: 0.001
+train_batch_size: 1
+test_batch_size: 1
+num_workers: 2
+freeze_batch_norm: true
+rooms: all_trainable_rooms
+max_rooms: null
+selected_rooms: []
+enforce_trainable_areas: true
+pretrain_checkpoint: ${softgroup.checkpoint_dir}/exp_1_backbone_latest.pth
+save_dir: ${softgroup.checkpoint_dir}

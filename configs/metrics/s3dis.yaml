@@ -1,0 +1,15 @@
+mode: s3dis
+rooms: all_test_rooms
+max_rooms: null
+selected_rooms:
+  - area: Area_5
+    room: office_1
+checkpoint: ${inference.checkpoint}
+output_dir: ${project.outputs_dir}/metrics/s3dis
+force_run: false
+allow_precomputed_results: false
+enforce_test_area: true
+display_tables: true
+save_per_object_csv: true
+save_room_csv: true
+save_summary_json: true

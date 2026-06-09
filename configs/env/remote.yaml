@@ -1,0 +1,17 @@
+name: remote
+workspace: .
+is_kaggle: false
+use_apt: false
+apt_packages: []
+kaggle:
+  configure_api: false
+  input_s3dis_dir: data/s3dis/Stanford3dDataset_v1.2
+  input_s3dis_preprocessed_dir: data/S3DIS_preprocessed
+torch:
+  target_torch: ""
+  target_torchvision: ""
+  target_torchaudio: ""
+  index_url: ""
+spconv:
+  cumm: ""
+  spconv: ""

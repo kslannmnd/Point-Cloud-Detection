@@ -1,0 +1,9 @@
+mode: none_download
+experiment_name: pretrained_s3dis
+checkpoint_key: softgroup_s3dis
+checkpoint_name: softgroup_s3dis_pretrained.pth
+rooms: all_trainable_rooms
+max_rooms: null
+selected_rooms: []
+enforce_trainable_areas: true
+save_dir: ${softgroup.checkpoint_dir}

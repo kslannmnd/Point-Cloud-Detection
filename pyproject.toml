@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "r3d-point-cloud-detection"
+version = "0.1.0"
+description = "Hydra-managed R3D/S3DIS to SoftGroup point cloud detection pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "hydra-core>=1.3.2",
+    "omegaconf>=2.3.0",
+    "PyYAML>=6.0",
+    "numpy>=1.23,<2",
+    "pandas>=2.0",
+    "plotly>=5.18",
+    "pillow>=10.0",
+    "gdown>=5.0",
+    "lzfse>=0.4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+show_s3dis_rooms = "r3d_point_cloud_detection.cli:show_s3dis_rooms_command"
+show_room = "r3d_point_cloud_detection.cli:show_room_command"
+show_room_instance_seg = "r3d_point_cloud_detection.cli:show_room_instance_seg_command"
+show_room_bbox = "r3d_point_cloud_detection.cli:show_room_bbox_command"
+show_gt_compare_table = "r3d_point_cloud_detection.cli:show_gt_compare_table_command"
+show_gt_compare_plot = "r3d_point_cloud_detection.cli:show_gt_compare_plot_command"
+precompute_s3dis_inference = "r3d_point_cloud_detection.cli:precompute_s3dis_inference_command"
+compute_s3dis_metrics = "r3d_point_cloud_detection.cli:compute_s3dis_metrics_command"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

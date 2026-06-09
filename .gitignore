@@ -1,0 +1,6 @@
+.venv/
+data/S3DIS_preprocessed.zip
+narepy.ipynb
+outputs/
+repo_processer.sh
+output.txt

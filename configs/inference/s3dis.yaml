@@ -1,0 +1,11 @@
+mode: s3dis
+checkpoint: ${softgroup.checkpoint_dir}/softgroup_s3dis_pretrained.pth
+target:
+  kind: room
+  area: Area_5
+  room: office_1
+output_dir: ${project.outputs_dir}/inference
+metrics_dir: ${project.outputs_dir}/metrics
+save_visualization: true
+max_points_plot: 35000
+min_points_for_box: 50

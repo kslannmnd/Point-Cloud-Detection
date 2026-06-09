@@ -1,0 +1,16 @@
+mode: template_train
+experiment_name: template_train
+template: full_softgroup
+stages:
+  - full_softgroup
+epochs: 2
+lr: 0.001
+train_batch_size: 1
+test_batch_size: 1
+num_workers: 2
+freeze_batch_norm: false
+rooms: all_trainable_rooms
+max_rooms: null
+selected_rooms: []
+enforce_trainable_areas: true
+save_dir: ${softgroup.checkpoint_dir}

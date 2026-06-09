@@ -1,0 +1,46 @@
+defaults:
+  - env: kaggle
+  - dataset: s3dis_preprocessed
+  - training: exp_1
+  - inference: s3dis
+  - visualization: s3dis
+  - metrics: s3dis
+  - _self_
+
+project:
+  name: r3d-point-cloud-detection
+  root: .
+  external_dir: external
+  outputs_dir: outputs
+  data_dir: data
+
+softgroup:
+  repo_url: https://github.com/thangvubk/SoftGroup.git
+  repo_dir: ${project.external_dir}/SoftGroup
+  checkpoint_dir: ${project.outputs_dir}/checkpoints
+  generated_config_dir: ${project.outputs_dir}/softgroup_configs
+  work_dir: ${project.outputs_dir}/work_dirs
+  runtime_env:
+    SPCONV_DISABLE_JIT: "1"
+    CUMM_DISABLE_JIT: "1"
+    CUMM_CUDA_VERSION: "12.1"
+    CUMM_CUDA_ARCH_LIST: "6.0"
+    TORCH_CUDA_ARCH_LIST: "6.0+PTX"
+    MAX_JOBS: "2"
+
+checkpoints:
+  softgroup_s3dis:
+    name: softgroup_s3dis_spconv2.pth
+    gdrive_id: 1-f7I6-eIma4OilBON928N6mVcYbhiUFP
+  hais_backbone:
+    name: hais_backbone_spconv2.pth
+    gdrive_id: 1FABsCUnxfO_VlItAzDYAwurdfcdK-scs
+
+setup:
+  clone_softgroup: true
+  run_prepare_kaggle_env: true
+  run_install_dependencies: true
+  run_prepare_s3dis: true
+  run_download_checkpoints: true
+  run_patch_softgroup: true
+  run_generate_configs: true
