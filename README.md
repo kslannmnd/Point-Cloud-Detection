@@ -1,12 +1,3 @@
-## Dirs
-
-- `configs/` - Hydra config for environment, dataset, training and inference.
-- `src/r3d_point_cloud_detection/` - project code and softgroup process.
-- `scripts/` - fast acess scripts.
-- `data/r3d/` - r3d / preprocessed s3dis
-- `outputs/` - checkpoints, generated configs, inference outputs.
-
-
 ## Experiments + training
 
 - `notebooks/kaggle_end_to_end_softgroup_r3d.ipynb` and `notebooks/colab_end_to_end_softgroup_r3d.ipynb` are for demonstration of all pipeline
